@@ -121,11 +121,11 @@ width: 100%
     &:hover
       text-decoration: none
     &:before
-      position: absolute;
+      position: absolute
       content: "\f0c1"
       font-family: FontAwesome
       font-size: 0.6em
-      transform: rotate(-45deg);
+      transform: rotate(-45deg)
 
   ul, ol, dl
     margin-top: line-height
@@ -429,34 +429,59 @@ $article-share-link
     display: block
     max-width: 100%
     margin: 0 auto
-/*
-$article-gallery-ctrl
-  position: absolute
-  top: 0
-  height: 100%
-  width: 60px
-  color: #fff
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
-  opacity: 0.3
-  transition: opacity 0.2s
-  cursor: pointer
-  &:hover
-    opacity: 0.8
-  &:before
-    font-size: 30px
-    font-family: font-icon
-    position: absolute
-    top: 50%
-    margin-top: @font-size * -0.5
-.article-gallery-prev
-  @extend $article-gallery-ctrl
-  left: 0
-  &:before
-    content: "\f053"
-    left: 15px
-.article-gallery-next
-  @extend $article-gallery-ctrl
-  right: 0
-  &:before
-    content: "\f054"
-    right: 15px*/
+
+div.alert
+  display: block
+  padding: 0.5em 1em
+  margin: 2em 0
+  color: #5d627b
+  background: white
+  border-top: solid 10px
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22)
+  p
+    margin-top: 0rem
+    margin-bottom: 0
+    &.alert-title
+      margin-bottom: 0.2rem
+      font-weight: 600
+      
+  &.is-info
+    border-color:  rgb(226, 218, 241)
+    .alert-title
+      &:before
+        content: "\f06a"
+        font-family: FontAwesome
+        padding-right: 6px
+
+  &.is-warning
+    border-color: rgb(255, 241, 204)
+    .alert-title
+      &:before
+        content: "\f071"
+        font-family: FontAwesome
+        padding-right: 6px
+
+  &.is-important
+    border-color: rgb(224, 242, 255)
+    .alert-title
+      &:before
+        content: "\f06a"
+        font-family: FontAwesome
+        padding-right: 6px
+
+  &.is-success
+    border-color: rgb(210, 249, 210)
+    .alert-title
+      &:before
+        content: "\f0eb"
+        font-family: FontAwesome
+        padding-right: 6px
+
+  &.is-question
+    border-color: rgb(210, 249, 210)
+    .alert-title
+      &:before
+        content: "\f059"
+        font-family: FontAwesome
+        padding-right: 6px
+    
