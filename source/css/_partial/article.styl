@@ -121,11 +121,11 @@ width: 100%
     &:hover
       text-decoration: none
     &:before
-      position: absolute;
+      position: absolute
       content: "\f0c1"
       font-family: FontAwesome
       font-size: 0.6em
-      transform: rotate(-45deg);
+      transform: rotate(-45deg)
 
   ul, ol, dl
     margin-top: line-height
@@ -432,9 +432,12 @@ $article-share-link
 
 div.alert
   display: block
-  padding: 1rem
-  border-radius: 0.5rem
-  margin-top: 1rem
+  padding: 0.5em 1em
+  margin: 2em 0
+  color: #5d627b
+  background: white
+  border-top: solid 10px
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22)
   p
     margin-top: 0rem
     margin-bottom: 0
@@ -443,7 +446,7 @@ div.alert
       font-weight: 600
       
   &.is-info
-    background-color: rgb(226, 218, 241)
+    border-color:  rgb(226, 218, 241)
     .alert-title
       &:before
         content: "\f06a"
@@ -451,7 +454,7 @@ div.alert
         padding-right: 6px
 
   &.is-warning
-    background-color: rgb(255, 241, 204)
+    border-color: rgb(255, 241, 204)
     .alert-title
       &:before
         content: "\f071"
@@ -459,7 +462,7 @@ div.alert
         padding-right: 6px
 
   &.is-important
-    background-color: rgb(224, 242, 255)
+    border-color: rgb(224, 242, 255)
     .alert-title
       &:before
         content: "\f06a"
@@ -467,7 +470,7 @@ div.alert
         padding-right: 6px
 
   &.is-success
-    background-color: rgb(210, 249, 210)
+    border-color: rgb(210, 249, 210)
     .alert-title
       &:before
         content: "\f0eb"
@@ -475,7 +478,7 @@ div.alert
         padding-right: 6px
 
   &.is-question
-    background-color: rgb(210, 249, 210)
+    border-color: rgb(210, 249, 210)
     .alert-title
       &:before
         content: "\f059"
