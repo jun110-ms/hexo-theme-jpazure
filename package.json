@@ -9,10 +9,5 @@
     "grunt-git": "^1.0.14",
     "load-grunt-tasks": "^5.1.0"
   },
-  "dependencies": {
-    "hexo": "^5.4.0",
-    "minimist": "^1.2.5",
-    "yargs-parser": "^20.2.7",
-    "hexo-generator-root-tag": "https://github.com/jpazureid/hexo-generator-root-tag.git"
-  }
+  "dependencies": {}
 }
