@@ -30,6 +30,20 @@
       <% } else { %>
         <%- post.content %>
       <% } %>
+      <% if (!post.disableDisclaimer && config.disclaimer){ %>
+        <div class="article-disclaimer">
+        <% if (Array.isArray(config.disclaimer)) { 
+          for(var line of config.disclaimer){  
+        %>
+          <p><%- line %></p>
+        <%
+           }  
+        } else { 
+        %>
+          <p><%- config.disclaimer%></p>
+        <% } %>
+        </div>
+      <% } %>
     </div>
     <footer class="article-footer">
       <% if (post.comments && config.disqus_shortname){ %>

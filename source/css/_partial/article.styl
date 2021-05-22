@@ -63,9 +63,24 @@
     /*color: color-link*/
 
 .article-readmore
-  width: 100%
-  margin: 0 !important
-  text-align: right
+width: 100%
+  margin: 1.6em 0 !important
+  /*text-align: right*/
+
+.article-readmore a
+  display: inline-block
+  line-height: 1em
+  padding: 6px 15px
+  border-radius: 15px
+  background: color-background
+  color: #737373 !important
+  text-shadow: 0 1px #fff
+  text-decoration: none
+  &:hover
+    background: color-link
+    color: #fff !important
+    text-decoration: none !important
+    text-shadow: 0 1px darken(color-link, 20%)
   
 
 .article-entry
@@ -81,11 +96,37 @@
   h1, h2, h3, h4, h5, h6
     line-height: line-height-title
     margin: line-height-title 0
+    /* color: #f60 */
   a
     color: color-link
     text-decoration: none
     &:hover
       text-decoration: underline
+  
+  h1,h2,h3
+    position: relative
+    &:hover
+      .headerlink
+        opacity: 1
+
+  .headerlink
+    cursor: pointer
+    position: absolute
+    top: 0.1em
+    left: -0.6em
+    opacity: 0
+    transition:visibility 1s
+    color: color-grey
+    vertical-align: middle
+    &:hover
+      text-decoration: none
+    &:before
+      position: absolute
+      content: "\f0c1"
+      font-family: FontAwesome
+      font-size: 0.6em
+      transform: rotate(-45deg)
+
   ul, ol, dl
     margin-top: line-height
     margin-bottom: line-height
@@ -93,7 +134,7 @@
     max-width: 100%
     height: auto
     display: block
-    margin: auto
+    /* margin: auto */ /* [makotsur] delete style 'margin auto = centering style' */
   iframe
     border: none
   table
@@ -220,6 +261,12 @@
     content: "\f044"
     font-family: FontAwesome
     padding-right: 6px
+
+.article-disclaimer
+  font-family: font-serif
+  font-style: italic
+  margin: line-height 20px
+  background-color: #f6f6f6
 
 #article-nav
   clearfix()
@@ -382,36 +429,59 @@ $article-share-link
     display: block
     max-width: 100%
     margin: 0 auto
-/*
-$article-gallery-ctrl
-  position: absolute
-  top: 0
-  height: 100%
-  width: 60px
-  color: #fff
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
-  opacity: 0.3
-  transition: opacity 0.2s
-  cursor: pointer
-  &:hover
-    opacity: 0.8
-  &:before
-    font-size: 30px
-    font-family: font-icon
-    position: absolute
-    top: 50%
-    margin-top: @font-size * -0.5
 
-.article-gallery-prev
-  @extend $article-gallery-ctrl
-  left: 0
-  &:before
-    content: "\f053"
-    left: 15px
+div.alert
+  display: block
+  padding: 0.5em 1em
+  margin: 2em 0
+  color: #5d627b
+  background: white
+  border-top: solid 10px
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22)
+  p
+    margin-top: 0rem
+    margin-bottom: 0
+    &.alert-title
+      margin-bottom: 0.2rem
+      font-weight: 600
+      
+  &.is-info
+    border-color:  rgb(226, 218, 241)
+    .alert-title
+      &:before
+        content: "\f06a"
+        font-family: FontAwesome
+        padding-right: 6px
 
-.article-gallery-next
-  @extend $article-gallery-ctrl
-  right: 0
-  &:before
-    content: "\f054"
-    right: 15px*/
+  &.is-warning
+    border-color: rgb(255, 241, 204)
+    .alert-title
+      &:before
+        content: "\f071"
+        font-family: FontAwesome
+        padding-right: 6px
+
+  &.is-important
+    border-color: rgb(224, 242, 255)
+    .alert-title
+      &:before
+        content: "\f06a"
+        font-family: FontAwesome
+        padding-right: 6px
+
+  &.is-success
+    border-color: rgb(210, 249, 210)
+    .alert-title
+      &:before
+        content: "\f0eb"
+        font-family: FontAwesome
+        padding-right: 6px
+
+  &.is-question
+    border-color: rgb(210, 249, 210)
+    .alert-title
+      &:before
+        content: "\f059"
+        font-family: FontAwesome
+        padding-right: 6px
+    
